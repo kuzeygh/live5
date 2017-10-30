@@ -3,6 +3,8 @@ PROCEDURE "live5.db::reset" ( )
    SQL SECURITY INVOKER
 	AS
 BEGIN
+	delete from "live5.db::graph.Users";
+	delete from "live5.db::graph.Relationships";
    	delete from "live5.db::PAL.Results";
 	delete from "live5.db::PAL.Centers";
 	delete from "live5.db::tables.Tweets";
